@@ -70,3 +70,5 @@ Plugin 'aurieh/discord.nvim'
 Plugin 'Valloric/YouCompleteMe'
 
 call vundle#end()
+
+let g:ycm_python_binary_path='.venv/bin/python'
