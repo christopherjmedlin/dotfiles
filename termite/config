@@ -3,7 +3,7 @@
 #audible_bell = false
 #clickable_url = true
 #dynamic_title = true
-font = Monospace 9
+font = Monospace 8
 #ullscreen = true
 #icon_name = terminal
 #mouse_autohide = false
@@ -52,44 +52,43 @@ scrollback_lines = 10000
 
 
 [colors]
-# hard contrast: background = #1d2021
-background = #282828
-# soft contrast: background = #32302f
-foreground = #ebdbb2
-foreground_bold = #ebdbb2
+# special
+foreground      = #dfccdc
+foreground_bold = #dfccdc
+cursor          = #dfccdc
+background      = #5e004d
 
-# dark0 + gray
-color0 = #282828
-color8 = #928374
+# black
+color0  = #bcb3bb
+color8  = #950000
 
-# neutral_red + bright_red
-color1 = #cc241d
-color9 = #fb4934
+# red
+color1  = #0069ae
+color9  = #1756b2
 
-# neutral_green + bright_green
-color2 = #98971a
-color10 = #b8bb26
+# green
+color2  = #b32545
+color10 = #ff00d1
 
-# neutral_yellow + bright_yellow
-color3 = #d79921
-color11 = #fabd2f
+# yellow
+color3  = #f9ac3b
+color11 = #0015ff
 
-# neutral_blue + bright_blue
-color4 = #458588
-color12 = #83a598
+# blue
+color4  = #ff00d1
+color12 = #ff00d1
 
-# neutral_purple + bright_purple
-color5 = #b16286
-color13 = #d3869b
+# magenta
+color5  = #ff00d1
+color13 = #ff00d1
 
-# neutral_aqua + faded_aqua
-color6 = #689d6a
-color14 = #8ec07c
+# cyan
+color6  = #a0268a
+color14 = #ffffff
 
-# light4 + light1
-color7 = #a89984
-color15 = #ebdbb2
-
+# white
+color7  = #000000
+color15 = #737373
 # vim: ft=dosini cms=#%s
 
-transparency=0.5
+transparency=1

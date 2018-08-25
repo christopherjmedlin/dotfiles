@@ -212,12 +212,13 @@ bar {
 	separator_symbol "♫♪♫"
 
 	colors {
-		background #AA0000
+		background #5e004d
 		separator #040A07
 		statusline #f5F2C1
-		focused_workspace #AA0000 #f4b817 #040a07
-		active_workspace #AA0000 #f5f2c1 #040a07
-		inactive_workspace #AA0000 #AA0000 #f5f2c1
+		focused_workspace #5e004d #FF6ee4 #040a07
+		active_workspace #5e004d #e000b7 #040a07
+
+		inactive_workspace #5e004d #e000b7 #040a07
 		urgent_workspace #AA0000 #6ECABF #040a07
 	}
 }
