@@ -69,6 +69,14 @@ Plugin 'aurieh/discord.nvim'
 
 Plugin 'Valloric/YouCompleteMe'
 
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
+
+Plugin 'Glench/Vim-Jinja2-Syntax'
+
 call vundle#end()
 
 let g:ycm_python_binary_path='.venv/bin/python'
+
+
+set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
