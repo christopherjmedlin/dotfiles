@@ -74,6 +74,8 @@ Plugin 'mxw/vim-jsx'
 
 Plugin 'Glench/Vim-Jinja2-Syntax'
 
+Plugin 'rust-lang/rust.vim'
+
 call vundle#end()
 
 let g:ycm_python_binary_path='.venv/bin/python'

@@ -210,17 +210,17 @@ bindsym $mod+g mode "$mode_gaps"
 bar {
         status_command i3status
 	separator_symbol "♫♪♫"
+        position top
 
-	colors {
-		background #5e004d
-		separator #040A07
-		statusline #f5F2C1
-		focused_workspace #5e004d #FF6ee4 #040a07
-		active_workspace #5e004d #e000b7 #040a07
-
-		inactive_workspace #5e004d #e000b7 #040a07
-		urgent_workspace #AA0000 #6ECABF #040a07
-	}
+        colors {
+                background #002b36
+                statusline #839496
+                separator  #586e75
+                focused_workspace  #b58900 #b58900 #002b36
+                active_workspace   #586e75 #586e75 #002b36
+                inactive_workspace #073642 #002b36 #839496
+                urgent_workspace   #dc322f #dc322f #fdf6e3
+        }
 }
 
 gaps inner 10
@@ -233,7 +233,6 @@ default_border none
 
 exec ~/.xrandr
 
-exec compton
 
 exec ~/.fehbg
 exec i3lock -i ~/.wallpaper
