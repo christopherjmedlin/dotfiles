@@ -1,6 +1,6 @@
 # If you come from bash you migh thave to change your $PATH.
 
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:$HOME/.cargo/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
   export ZSH=/home/christophermedlin/.oh-my-zsh
@@ -97,6 +97,9 @@ source $ZSH/oh-my-zsh.sh
 
 alias vim="nvim"
 alias j="autojump"
+alias t="todo-txt"
+alias x="exit"
+alias c="clear"
 
 docker-ip() {
   docker inspect --format '{{ .NetworkSettings.IPAddress }}' "$@"
