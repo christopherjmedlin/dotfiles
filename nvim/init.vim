@@ -83,5 +83,6 @@ call vundle#end()
 
 let g:ycm_python_binary_path='.venv/bin/python'
 
+autocmd vimenter * NERDTree
 
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
