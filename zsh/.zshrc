@@ -100,6 +100,8 @@ alias j="autojump"
 alias t="todo-txt"
 alias x="exit"
 alias c="clear"
+alias mux="tmuxinator"
+alias proj="python3 ~/scripts/proj.py"
 
 docker-ip() {
   docker inspect --format '{{ .NetworkSettings.IPAddress }}' "$@"
@@ -109,3 +111,4 @@ docker-ip() {
 [ -f /home/christophermedlin/.travis/travis.sh ] && source /home/christophermedlin/.travis/travis.sh
 
 GOPATH=~/go
+EDITOR=nvim
