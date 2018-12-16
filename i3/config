@@ -238,4 +238,5 @@ exec ~/.fehbg
 exec i3lock -i ~/.wallpaper
 
 exec redshift
+exec compton
 exec dropbox start
