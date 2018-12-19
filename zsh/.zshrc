@@ -103,6 +103,7 @@ alias c="clear"
 alias mux="tmuxinator"
 alias proj="python3 ~/scripts/proj.py"
 alias wttr="curl wttr.in"
+alias torbrowser="~/torbrowser/start-tor-browser"
 
 docker-ip() {
   docker inspect --format '{{ .NetworkSettings.IPAddress }}' "$@"
