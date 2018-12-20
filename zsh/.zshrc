@@ -8,7 +8,7 @@ export PATH=$HOME/bin:$HOME/.cargo/bin:/usr/local/bin:$PATH
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="darkblood"
+ZSH_THEME="lambda"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -61,6 +61,7 @@ ZSH_THEME="darkblood"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+  debian
 )
 
 source $ZSH/oh-my-zsh.sh

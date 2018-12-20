@@ -52,6 +52,7 @@ instance=Master
 #instance=PCM
 interval=once
 signal=10
+color=#bcb914
 
 # Disk usage
 #
