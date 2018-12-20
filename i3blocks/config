@@ -90,7 +90,7 @@ interval=10
 label=⏰
 command=date '+%Y-%m-%d %H:%M:%S'
 interval=5
-
+color=#fca253
 
 
 # Battery indicator
