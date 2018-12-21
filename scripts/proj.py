@@ -20,10 +20,10 @@ questions = [
         'type': 'list',
         'name': 'project',
         'message': 'Select project:',
-        'choices': get_project_dirs("/home/christophermedlin/Projects"),
+        'choices': get_project_dirs("/home/christophermedlin/projects"),
     },
 ]
 
 if __name__ == "__main__":
     answers = prompt(questions)
-    start_tmux("~/Projects/" + answers["project"])
+    start_tmux("~/projects/" + answers["project"])
