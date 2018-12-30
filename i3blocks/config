@@ -36,7 +36,7 @@ interval=5
 
 # Guess the weather hourly
 [weather]
-command=curl -Ss 'https://wttr.in?0&T&Q' | cut -c 16- | head -2 | xargs echo
+command=curl -Ss 'https://wttr.in/Portland?0&T&Q' | cut -c 16- | head -2 | xargs echo
 interval=3600
 color=#A4C2F4
 
@@ -46,7 +46,7 @@ color=#A4C2F4
 # The second parameter overrides the mixer selection
 # See the script for details.
 [volume]
-label=🔊
+label=
 #label=♪
 instance=Master
 #instance=PCM
@@ -60,7 +60,7 @@ color=#bcb914
 # The script may be called with a optional argument to set the alert
 # (defaults to 10 for 10%).
 [disk]
-label=🗄
+label=
 #instance=/mnt/data
 interval=30
 
@@ -69,7 +69,7 @@ interval=30
 # If the instance is not specified, use the interface used for default route.
 # The address can be forced to IPv4 or IPv6 with -4 or -6 switches.
 [iface]
-label=🌐
+label=
 #instance=wlan0
 color=#00FF00
 interval=10
@@ -87,7 +87,7 @@ interval=10
 # Date Time
 #
 [time]
-label=⏰
+label=
 command=date '+%Y-%m-%d %H:%M:%S'
 interval=5
 color=#fca253
