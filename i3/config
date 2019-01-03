@@ -101,11 +101,11 @@ bindsym $mod+Shift+bracketright move workspace to output right
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1: "
-set $ws2 "2: "
-set $ws3 "3: "
-set $ws4 "4: "
-set $ws5 "5: "
+set $ws1 ""
+set $ws2 ""
+set $ws3 ""
+set $ws4 ""
+set $ws5 ""
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
@@ -220,7 +220,7 @@ bar {
                 background #002b36
                 statusline #839496
                 separator  #9214bc
-                focused_workspace  #002b36 #b58900 #002b36
+                focused_workspace  #002b36 #002b36 #c6ed1a
                 active_workspace   #002b36 #586e75 #002b36
                 inactive_workspace #002b36 #002b36 #839496
                 urgent_workspace   #002b36 #dc322f #fdf6e3
@@ -231,6 +231,13 @@ gaps inner 10
 gaps outer 20
 
 default_border none
+
+for_window [class="Termite"] border pixel 1
+for_window [class="Zathura"] border pixel 1
+
+client.focused #ffffff #c6ed1a #ffffff #ffffff #c6ed1a
+client.unfocused #ffffff #839496 #ffffff #ffffff
+client.focused_inactive #ffffff #839496 #839496 #839496 #839496
 
 # exec xrandr --output DVI-D-0 --right-of DVI-I-1
 # exec xrandr --output HDMI-0 --right-of DVI-D-0
