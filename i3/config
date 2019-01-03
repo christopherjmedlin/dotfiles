@@ -235,8 +235,8 @@ default_border none
 for_window [class="Termite"] border pixel 1
 for_window [class="Zathura"] border pixel 1
 
-client.focused #ffffff #c6ed1a #ffffff #ffffff #c6ed1a
-client.unfocused #ffffff #839496 #ffffff #ffffff
+client.focused #c6ed1a #c6ed1a #002b36 #ffffff #c6ed1a
+client.unfocused #839496 #839496 #002b36 #ffffff
 client.focused_inactive #ffffff #839496 #839496 #839496 #839496
 
 # exec xrandr --output DVI-D-0 --right-of DVI-I-1
