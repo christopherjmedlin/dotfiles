@@ -232,8 +232,6 @@ gaps outer 20
 
 default_border none
 
-for_window [class="Termite"] border pixel 1
-for_window [class="Zathura"] border pixel 1
 
 client.focused #c6ed1a #c6ed1a #002b36 #ffffff #c6ed1a
 client.unfocused #839496 #839496 #002b36 #ffffff
@@ -249,7 +247,7 @@ exec ~/.fehbg
 exec i3lock -i ~/.wallpaper
 
 exec redshift
-exec compton
+exec compton -c
 exec dropbox start
 
 exec nm-applet
