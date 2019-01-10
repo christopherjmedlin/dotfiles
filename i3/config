@@ -101,16 +101,15 @@ bindsym $mod+Shift+bracketright move workspace to output right
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 ""
-set $ws2 ""
-set $ws3 ""
-set $ws4 ""
-set $ws5 ""
-set $ws6 "6"
-set $ws7 "7"
-set $ws8 "8"
-set $ws9 "9"
-set $ws10 "10"
+set $ws1 "1: "
+set $ws2 "2: "
+set $ws3 "3: "
+set $ws4 "4: "
+set $ws5 "5: "
+set $ws6 "6: "
+set $ws7 "7: "
+set $ws8 "8: "
+set $ws9 "9: "
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -122,7 +121,6 @@ bindsym $mod+6 workspace $ws6
 bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
-bindsym $mod+0 workspace $ws10
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
@@ -134,7 +132,6 @@ bindsym $mod+Shift+6 move container to workspace $ws6
 bindsym $mod+Shift+7 move container to workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
-bindsym $mod+Shift+0 move container to workspace $ws10
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -228,7 +225,7 @@ bar {
 }
 
 gaps inner 10
-gaps outer 20
+gaps outer 30
 
 default_border none
 
@@ -257,7 +254,17 @@ exec python3 ~/scripts/upgradenotifier.py
 
 assign [class="^Firefox$"] $ws2
 exec firefox
-assign [class="^Discord$"] $ws4
-exec discord
-assign [class="^Zathura$"] $ws5
+assign [class="^cmus$"] $ws3
+exec termite -e 'tmuxinator music' -t "cmus" -r "cmus"
+assign [class="^Zathura$"] $ws4
 exec zathura
+assign [class="^Riot$"] $ws5
+exec riot-web
+assign [class="^discord$"] $ws6
+exec discord
+assign [class="^Steam$"] $ws7
+exec steam
+assign [class="^Deluge$"] $ws8
+exec deluge
+
+exec i3-msg "workspace $ws1; exec termite -e 'neofetch' --hold; floating toggle; resize width shrink 50"

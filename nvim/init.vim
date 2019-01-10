@@ -80,6 +80,8 @@ Plugin 'vim-syntastic/syntastic'
 
 Plugin 'vimwiki/vimwiki'
 Plugin 'szw/vim-dict'
+
+Plugin 'wilsaj/chuck.vim'
 call vundle#end()
 
 let g:ycm_python_binary_path='.venv/bin/python'
