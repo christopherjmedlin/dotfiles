@@ -267,4 +267,5 @@ exec steam
 assign [class="^Deluge$"] $ws8
 exec deluge
 
+exec i3-msg "workspace $ws4; exec vimwiki"
 exec i3-msg "workspace $ws1; exec termite -e 'neofetch' --hold; floating toggle; resize width shrink 50"
