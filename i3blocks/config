@@ -32,7 +32,7 @@ markup=none
 [cmus]
 label=♫
 interval=5
-#command=~/scripts/cmus-i3blocks.sh
+command=~/scripts/cmus-i3blocks.sh
 
 # Guess the weather hourly
 [weather]
