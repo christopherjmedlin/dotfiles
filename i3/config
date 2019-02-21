@@ -35,6 +35,9 @@ bindsym $mod+Return exec termite
 # kill focused window
 bindsym $mod+Shift+q kill
 
+bindsym $mod+plus exec amixer -q -D default sset Master 10%+
+bindsym $mod+minus exec amixer -q -D default sset Master 10%-
+
 # start dmenu (a program launcher)
 bindsym $mod+d exec rofi -show run -theme "solarized"
 bindsym $mod+c exec rofi -show window -theme "solarized"

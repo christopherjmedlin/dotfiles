@@ -103,7 +103,7 @@ alias x="exit"
 alias c="clear"
 alias mux="tmuxinator"
 alias proj="python3 ~/scripts/proj.py"
-alias wttr="curl wttr.in/Portland"
+alias wttr="curl wttr.in/Albuquerque"
 alias torbrowser="~/.torbrowser/start-tor-browser"
 
 docker-ip() {
