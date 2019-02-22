@@ -23,7 +23,7 @@ runtime! debian.vim
 
 " Vim5 and later versions support syntax highlighting. Uncommenting the next
 " line enables syntax highlighting by default.
-"syntax on
+syntax on
 
 " If using a dark background within the editing area and syntax highlighting
 " turn on this option as well
@@ -52,12 +52,10 @@ runtime! debian.vim
 "set hidden		" Hide buffers when they are abandoned
 "set mouse=a		" Enable mouse usage (all modes)
 
-" Source a global configuration file if available
-if filereadable("/etc/vim/vimrc.local")
-  source /etc/vim/vimrc.local
-endif
-
+filetype off
 set rtp+=~/.nvim/bundle/Vundle.vim
+
+
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
@@ -66,15 +64,12 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/NERDTree'
 
 Plugin 'aurieh/discord.nvim'
-
 Plugin 'Valloric/YouCompleteMe'
-
+Plugin 'rust-lang/rust.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 
 Plugin 'Glench/Vim-Jinja2-Syntax'
-
-Plugin 'rust-lang/rust.vim'
 
 Plugin 'vim-syntastic/syntastic'
 
@@ -82,10 +77,14 @@ Plugin 'vimwiki/vimwiki'
 Plugin 'szw/vim-dict'
 
 Plugin 'wilsaj/chuck.vim'
+Plugin 'mattn/gist-vim'
+Plugin 'mattn/webapi-vim'
 call vundle#end()
+filetype plugin indent on
 
 let g:ycm_python_binary_path='.venv/bin/python'
+let g:rustfmt_autosave=1
 
-
+autocmd BufNewFile,BufRead *.rs set filetype=rust
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 set number
