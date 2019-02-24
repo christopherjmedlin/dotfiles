@@ -105,6 +105,7 @@ alias mux="tmuxinator"
 alias proj="python3 ~/scripts/proj.py"
 alias wttr="curl wttr.in/Albuquerque"
 alias torbrowser="~/.torbrowser/start-tor-browser"
+alias ls="lsd"
 
 docker-ip() {
   docker inspect --format '{{ .NetworkSettings.IPAddress }}' "$@"
