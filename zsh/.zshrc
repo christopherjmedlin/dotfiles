@@ -106,6 +106,7 @@ alias proj="python3 ~/scripts/proj.py"
 alias wttr="curl wttr.in/Albuquerque"
 alias torbrowser="~/.torbrowser/start-tor-browser"
 alias ls="lsd"
+alias timer='python3 ~/scripts/timer.py $(zenity --entry --text="Enter a time (5s, 5m, 5h)")'
 
 docker-ip() {
   docker inspect --format '{{ .NetworkSettings.IPAddress }}' "$@"

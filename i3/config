@@ -29,16 +29,19 @@ font pango:monospace 8
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+# set a timer
+bindsym $mod+t exec "python3 ~/scripts/timer.py $(zenity --entry --text='Enter a time (5s, 5m, 5h)')"
+
 # start a terminal
 bindsym $mod+Return exec termite
 
 # kill focused window
 bindsym $mod+Shift+q kill
 
-bindsym $mod+plus exec amixer -q -D default sset Master 10%+
-bindsym $mod+minus exec amixer -q -D default sset Master 10%-
-bindsym $mod+Shift+plus exec cmus-remote -n
-bindsym $mod+Shift+minus exec cmus-remote -r
+bindsym $mod+plus exec amixer -q -D default sset Master 5%+
+bindsym $mod+minus exec amixer -q -D default sset Master 5%-
+bindsym $mod+x exec cmus-remote -n
+bindsym $mod+z exec cmus-remote -r
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec rofi -show run -theme "solarized"
