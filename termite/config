@@ -38,7 +38,7 @@ scrollback_lines = 10000
 #scrollbar = off
 
 [hints]
-#font = Monospace 12
+#font = Monospace 13
 #foreground = #dcdccc
 #background = #3f3f3f
 #active_foreground = #e68080

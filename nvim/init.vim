@@ -79,11 +79,19 @@ Plugin 'szw/vim-dict'
 Plugin 'wilsaj/chuck.vim'
 Plugin 'mattn/gist-vim'
 Plugin 'mattn/webapi-vim'
+
+Plugin 'majutsushi/tagbar'
+
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+
 call vundle#end()
 filetype plugin indent on
 
 let g:ycm_python_binary_path='.venv/bin/python'
 let g:rustfmt_autosave=1
+
+let g:airline_theme='solarized'
 
 autocmd BufNewFile,BufRead *.rs set filetype=rust
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab

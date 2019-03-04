@@ -37,10 +37,12 @@ bindsym $mod+Shift+q kill
 
 bindsym $mod+plus exec amixer -q -D default sset Master 10%+
 bindsym $mod+minus exec amixer -q -D default sset Master 10%-
+bindsym $mod+Shift+plus exec cmus-remote -n
+bindsym $mod+Shift+minus exec cmus-remote -r
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec rofi -show run -theme "solarized"
-bindsym $mod+c exec rofi -show window -theme "solarized"
+bindsym $mod+Shift+w exec rofi -show window -theme "solarized"
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
