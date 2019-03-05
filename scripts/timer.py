@@ -6,12 +6,8 @@ import sys
 import argparse
 
 def nag(path):
-    mplayer = subprocess.Popen(['mplayer', path])
-    i3nagbar =subprocess.Popen(['i3-nagbar', '-t', 'warning', '-m' '"Timer finished"'])
-    while i3nagbar.poll() is not 0:
-        time.sleep(1)
-        if mplayer.poll() is 0:
-            mplayer = subprocess.Popen(['mplayer', path])
+    mplayer = subprocess.Popen(['mplayer', '-loop', '0', path])
+    subprocess.Popen(['i3-nagbar', '-t', 'warning', '-m' '"Timer finished"']).wait()
     mplayer.kill()
 
 def parse_time(time):
