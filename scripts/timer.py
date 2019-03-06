@@ -5,10 +5,29 @@ import subprocess
 import sys
 import argparse
 
+THINKPAD_KBD_LIGHT_PATH = "/sys/class/leds/tpacpi::kbd_backlight/brightness"
+
 def nag(path):
     mplayer = subprocess.Popen(['mplayer', '-loop', '0', path])
-    subprocess.Popen(['i3-nagbar', '-t', 'warning', '-m' '"Timer finished"']).wait()
+    nagbar = subprocess.Popen(['i3-nagbar', '-t', 'warning', '-m' '"Timer finished"'])
+    while nagbar.poll() == None:
+        toggle_keyboard_light()
+        time.sleep(0.5)
     mplayer.kill()
+
+    with open(THINKPAD_KBD_LIGHT_PATH, "w") as f:
+        f.write("0")
+
+def toggle_keyboard_light():
+    current_state = "0"
+    with open(THINKPAD_KBD_LIGHT_PATH, "r") as f:
+        current_state = f.read()
+    with open(THINKPAD_KBD_LIGHT_PATH, "w") as f:
+        if "0" in current_state:
+            print("hmm")
+            f.write("2")
+        else:
+            f.write("0")
 
 def parse_time(time):
     time_int = int(time[:-1])

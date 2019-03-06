@@ -32,6 +32,8 @@ floating_modifier $mod
 # set a timer
 bindsym $mod+t exec "python3 ~/scripts/timer.py $(zenity --entry --text='Enter a time (5s, 5m, 5h)')"
 
+bindsym $mod+u exec "bash ~/scripts/togglekbd.sh"
+
 # start a terminal
 bindsym $mod+Return exec termite
 
