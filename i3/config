@@ -260,6 +260,10 @@ exec dropbox start
 exec nm-applet
 exec ~/bin/pia
 
+# autolock and turn off screen
+exec --no-startup-id xset dpms 600
+exec --no-startup-id xautolock -time 10 -locker "i3lock -i ~/.wallpaper"
+
 exec python3 ~/scripts/upgradenotifier.py
 
 assign [class="^Firefox$"] $ws2
@@ -272,8 +276,8 @@ assign [class="^Riot$"] $ws5
 exec riot-web
 assign [class="^discord$"] $ws6
 exec discord
-assign [class="^Steam$"] $ws7
-exec steam
+assign [class="^Lutris$"] $ws7
+exec lutris
 assign [class="^Deluge$"] $ws8
 exec deluge
 
