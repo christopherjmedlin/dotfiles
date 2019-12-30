@@ -13,4 +13,9 @@ ln -s "$(pwd)/.zprofile" "$HOME/.zprofile"
 ln -s "$(pwd)/.xinitrc" "$HOME/.xinitrc" 
 
 mkdir -p $HOME/bin
-cp "$(pwd)/scripts/*" $HOME/bin
+cp scripts/* $HOME/bin
+
+# mutt wizard
+git clone https://github.com/LukeSmithxyz/mutt-wizard /tmp/mutt-wizard
+cd /tmp/mutt-wizard
+sudo make install
