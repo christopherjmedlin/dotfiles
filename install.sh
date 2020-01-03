@@ -4,6 +4,8 @@
 cd "${0%/*}"
 
 ln -Ts "$(pwd)/.config/vim" "$HOME/.config/vim"
+mkdir -p $HOME/.config/surf
+touch $HOME/.config/surf/bookmarks
 mkdir -p $HOME/.config/mpd
 mkdir -p $HOME/.config/ncmpcpp
 ln -s "$(pwd)/.config/mpd/mpd.conf" "$HOME/.config/mpd/mpd.conf" 
