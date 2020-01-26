@@ -16,6 +16,7 @@ while true; do
 	sleep 3s
 done &
 
+unclutter &
 exec ~/bin/startdwm.sh
 # invoke global X session script
 . /etc/X11/Xsession
