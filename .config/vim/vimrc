@@ -80,3 +80,10 @@ autocmd InsertLeave * highlight CursorLine cterm=NONE ctermfg=NONE ctermbg=233 g
 nnoremap <Leader>b :ls<CR>:b<Space>
 nnoremap <Leader>m :make<CR>
 nnoremap <Leader>t :make test<CR>
+
+" Plugins
+call plug#begin('~/.config/vim/plugged')
+
+Plug 'lervag/vimtex'
+
+call plug#end()
