@@ -17,6 +17,7 @@ while true; do
 done &
 
 unclutter &
+/usr/bin/setxkbmap -option '' -option 'ctrl:nocaps' &
 exec ~/bin/startdwm.sh
 # invoke global X session script
 . /etc/X11/Xsession
