@@ -16,6 +16,7 @@ while true; do
 	sleep 3s
 done &
 
+mpdscribble &
 unclutter &
 /usr/bin/setxkbmap -option '' -option 'ctrl:nocaps' &
 exec ~/bin/startdwm.sh

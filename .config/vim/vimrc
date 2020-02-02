@@ -81,6 +81,10 @@ nnoremap <Leader>b :ls<CR>:b<Space>
 nnoremap <Leader>m :make<CR>
 nnoremap <Leader>t :make test<CR>
 
+" xclip
+vmap <c-c> y:call system("xclip -i -selection clipboard", getreg("\""))<cr>:call system("xclip -i", getreg("\""))<cr>
+nmap <c-v> :call setreg("\"",system("xclip -o -selection clipboard"))<cr>p")")")"))
+
 " Plugins
 call plug#begin('~/.config/vim/plugged')
 
