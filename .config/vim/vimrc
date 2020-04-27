@@ -64,7 +64,7 @@ set number
 
 set tabstop=4
 set shiftwidth=4
-set noexpandtab
+set expandtab
 
 " 256 noir colorscheme
 
@@ -89,5 +89,8 @@ nmap <c-v> :call setreg("\"",system("xclip -o -selection clipboard"))<cr>p")")")
 call plug#begin('~/.config/vim/plugged')
 
 Plug 'lervag/vimtex'
+Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
 
 call plug#end()
