@@ -19,6 +19,9 @@ done &
 mpdscribble &
 unclutter &
 /usr/bin/setxkbmap -option '' -option 'ctrl:nocaps' &
+redshift &
+xautolock -time 5 -locker "slock" -corners 1111 &
+xautolock -time 7 -locker "systemctl suspend" &
 exec ~/bin/startdwm.sh
 # invoke global X session script
 . /etc/X11/Xsession
