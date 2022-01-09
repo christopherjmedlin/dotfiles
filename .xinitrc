@@ -1,27 +1,22 @@
 #!/bin/sh
-
-# /etc/X11/xinit/xinitrc
 #
-# global xinitrc file, used by all X sessions started by xinit (startx)
+# ~/.xinitrc
+#
+# Executed by startx (run your window manager from here)
 
-# This is for an issue with Android Studio.
-# If you run into any issues with Java apps, consider removing this line
-export _JAVA_AWT_WM_NONREPARENTING=1
+if [ -d /etc/X11/xinit/xinitrc.d ]; then
+  for f in /etc/X11/xinit/xinitrc.d/*; do
+    [ -x "$f" ] && . "$f"
+  done
+  unset f
+fi
 
-RED="^c#AA0000^"
-WHITE="^c#eeeeee^"
+xset +fp /usr/share/fonts/local &
+xset fp rehash &
+xrdb ~/.Xresources
+xsetroot -cursor_name left_ptr
 
-while true; do
-	xsetroot -name "$WHITE ♪ $(mpc | head -n 1)$RED λ $WHITE$(date)"
-	sleep 3s
-done &
+#exec herbstluftwm --locked
+sxhkd &
+exec bspwm
 
-mpdscribble &
-unclutter &
-/usr/bin/setxkbmap -option '' -option 'ctrl:nocaps' &
-redshift &
-xautolock -time 5 -locker "slock" -corners 1111 &
-xautolock -time 7 -locker "systemctl suspend" &
-exec ~/bin/startdwm.sh
-# invoke global X session script
-. /etc/X11/Xsession
