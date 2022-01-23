@@ -88,9 +88,13 @@ nmap <c-v> :call setreg("\"",system("xclip -o -selection clipboard"))<cr>p")")")
 " Plugins
 call plug#begin('~/.config/vim/plugged')
 
+let maplocalleader="\<space>"
+
 Plug 'lervag/vimtex'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
+Plug 'freitass/todo.txt-vim'
+Plug 'vimwiki/vimwiki'
 
 call plug#end()
